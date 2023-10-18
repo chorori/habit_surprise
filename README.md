@@ -1,24 +1,64 @@
-# README
+# 習慣サプライズ
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* 習慣サプライズは、YouTuber『マコなり社長』の配信された動画で提示された人生を最高にする為の習慣やアクションプランを効果的に振り返り、実行・継続するためのアプリケーションです。
+* 『マコなり社長』の「人生にサプライズ」の理念に共感し、その理念を更に多くの人々に実践してもらうための支援ツールとして開発。
 
-Things you may want to cover:
+# 特徴
 
-* Ruby version
+* 『マコなり社長』の動画内での具体的な習慣やアクションプランを容易に振り返り・実行できる。
+* ユーザーの継続活動に応じて称号がグレードアップするモチベーション機能。
+* YouTube動画への直接リンクを通じて、動画の視聴回数増加をサポート。
+* ユーザー間のコミュニケーションツールを搭載。
 
-* System dependencies
+# 誰のためのアプリか
 
-* Configuration
+* 人生を変えたいけれど、具体的なアクションプランがわからない人。
+* 新しいことに挑戦したいと思っている人。
+* マコなり社長の動画のファン。
 
-* Database creation
+# URL
 
-* Database initialization
+※ デプロイ完了後に追記
 
-* How to run the test suite
+# テスト用アカウント
 
-* Services (job queues, cache servers, search engines, etc.)
+※ 実装後に追記
 
-* Deployment instructions
 
-* ...
+# 洗い出した要件
+
+要件定義シート
+https://docs.google.com/spreadsheets/d/1k5aAlLLAf5rhgy8hTDb18Hv5ki_HYVh7XQIjap_JxqY/edit#gid=982722306
+
+# 利用方法
+
+1. アカウントを登録/ログインする。
+2. マコなり社長の動画から選択したアクションプランを追加。
+3. 日々の進捗を記録し、継続を促す通知を受け取る。
+4. 他のユーザーとアクションプランを共有・実行。
+
+
+# 主な機能
+
+* 称号機能: ユーザーの継続活動によって称号が変わる。
+* コミュニケーションツール: ユーザー間のアクションプランの共有・実行。
+
+# データベース設計
+* /Users/nishiharashinji/projects/habit_surprise/ER.dio
+
+# 画面遷移図
+* /Users/nishiharashinji/projects/habit_surprise/ ERER .dio
+
+# 開発環境
+
+* 言語: Ruby
+* フレームワーク: Ruby on Rails
+* データベース: Sequel Pro
+
+# ローカルでの動作方法
+
+* git cloneしてから、ローカルで動作をさせるまでに必要なコマンドを記載。
+
+# 工夫したポイント
+
+※ 実装後に追記

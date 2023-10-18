@@ -1,0 +1,40 @@
+users フォルダ:
+ユーザー関連のページを管理
+profile.html
+login.html
+signup.html
+settings.html
+
+habits フォルダ:
+習慣関連のページを管理
+habits.html
+habit_detail.html
+habit_new.html
+
+achievements フォルダ:
+実績や称号に関するページを管理
+achievements.html
+
+notifications フォルダ:
+通知関連のページを管理
+notifications.html
+
+ranking フォルダ:
+ランキング関連のページを管理
+ranking.html
+
+friends フォルダ:
+友達やフォロワー関連のページを管理
+friends.html
+
+shared or partials フォルダ:
+複数のビューで共有される部分テンプレートを管理
+ヘッダーやフッターなどの共通部分
+
+errors フォルダ:
+エラー関連のページを管理
+error.html
+
+ルートディレクトリ:
+アプリケーションの主要なエントリーポイントや一般的なページ
+home.html
