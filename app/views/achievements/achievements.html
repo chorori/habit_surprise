@@ -1,0 +1,23 @@
+<!-- achievements.html -->
+<div class="main">
+  <div class="inner">
+    <div class="achievements__wrapper">
+      <h2 class="page-heading">あなたの実績</h2>
+
+      <div class="achievements__lists">
+        <% @achievements.each do |achievement| %>
+          <div class="achievement__item">
+            <p class="achievement__title">
+              <%= achievement.title %>
+            </p>
+            <p class="achievement__description">
+              <%= achievement.description %>
+            </p>
+            <%= image_tag achievement.image, class: "achievement__image" if achievement.image.present? %>
+          </div>
+        <% end %>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,19 +1,20 @@
 users フォルダ:
 ユーザー関連のページを管理
-profile.html
-login.html
+profile.html 済
+login.html 済
 signup.html
 settings.html
 
 habits フォルダ:
 習慣関連のページを管理
-habits.html
-habit_detail.html
-habit_new.html
+habits.html 済
+habit_detail.html 済
+habit_new.html 済
+新規追加 habit_show.html 済
 
 achievements フォルダ:
 実績や称号に関するページを管理
-achievements.html
+achievements.html 済
 
 notifications フォルダ:
 通知関連のページを管理
@@ -37,4 +38,4 @@ error.html
 
 ルートディレクトリ:
 アプリケーションの主要なエントリーポイントや一般的なページ
-home.html
+home.html 済
