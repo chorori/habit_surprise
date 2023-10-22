@@ -1,0 +1,19 @@
+<!-- notifications.html -->
+<div class="main">
+  <div class="inner">
+    <h2 class="page-heading">通知</h2>
+
+    <div class="notifications__wrapper">
+      <% @notifications.each do |notification| %>
+        <div class="notification__item">
+          <div class="notification__content">
+            <%= notification.content %>
+          </div>
+          <div class="notification__time">
+            <%= time_ago_in_words(notification.created_at) %>前
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

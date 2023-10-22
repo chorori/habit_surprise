@@ -2,8 +2,8 @@ users フォルダ:
 ユーザー関連のページを管理
 profile.html 済
 login.html 済
-signup.html
-settings.html
+signup.html 済
+settings.html 済
 
 habits フォルダ:
 習慣関連のページを管理
@@ -18,15 +18,15 @@ achievements.html 済
 
 notifications フォルダ:
 通知関連のページを管理
-notifications.html
+notifications.html 済
 
 ranking フォルダ:
 ランキング関連のページを管理
-ranking.html
+ranking.html 済
 
 friends フォルダ:
 友達やフォロワー関連のページを管理
-friends.html
+friends.html 済
 
 shared or partials フォルダ:
 複数のビューで共有される部分テンプレートを管理

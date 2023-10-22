@@ -1,0 +1,41 @@
+<!-- friends.html -->
+<div class="main">
+  <div class="inner">
+    <h2 class="page-heading">友達・フォロワー</h2>
+
+    <div class="friends__wrapper">
+      <div class="friends__list">
+        <h3>友達</h3>
+        <ul>
+          <% @friends.each do |friend| %>
+            <li>
+              <div class="friend__name">
+                <%= friend.name %>
+              </div>
+              <div class="friend__actions">
+                <button>メッセージ</button>
+                <button>友達解除</button>
+              </div>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+
+      <div class="followers__list">
+        <h3>フォロワー</h3>
+        <ul>
+          <% @followers.each do |follower| %>
+            <li>
+              <div class="follower__name">
+                <%= follower.name %>
+              </div>
+              <div class="follower__actions">
+                <button>フォロー返す</button>
+              </div>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

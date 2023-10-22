@@ -1,0 +1,22 @@
+<!-- ranking.html -->
+<div class="main">
+  <div class="inner">
+    <h2 class="page-heading">ランキング</h2>
+
+    <div class="ranking__wrapper">
+      <% @rankings.each_with_index do |ranking, index| %>
+        <div class="ranking__item">
+          <div class="ranking__position">
+            <%= index + 1 %>位
+          </div>
+          <div class="ranking__user">
+            <%= ranking.user.name %>
+          </div>
+          <div class="ranking__score">
+            スコア: <%= ranking.score %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
