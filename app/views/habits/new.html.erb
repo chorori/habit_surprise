@@ -1,12 +1,86 @@
-<h1>新しい習慣を追加</h1>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>新しい習慣を追加 | 習慣サプライズ</title>
+  <!-- スタイルシートのリンクなど -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.getElementById('habit-name').addEventListener('change', function() {
+        var descriptions = {
+          '食生活': `正しい食生活を身につけましょう。<br>
+            参考動画【心機一転！今年から絶対に始めるべき習慣 10選】<br>
+            <a href="https://www.youtube.com/watch?v=I5dHHSByHTk&t=193" target="_blank">https://www.youtube.com/watch?v=I5dHHSByHTk&t=193</a><br>
+            注意するべき食べ物<br>
+            ①白ご飯・うどん・ラーメン・食パン<br>
+            ②加工肉製品<br>
+            ③菓子パン・スイーツ・甘いもの<br>
+            ④砂糖入り飲料<br>
+            ⑤揚げ物<br>
+            アクションプラン<br>
+            ①行き帰りにコンビニに寄らない<br>
+            ②家で野菜を食べる`,
+          '読書': '毎日少なくとも20ページを読むことを目標にします。知識を広げ、想像力を豊かにします。',
+          '瞑想': '毎日10分間の瞑想を行い、心の平穏を保ちます。',
+          '早起き': '毎朝6時に起きることで、1日を有効に使います。'
+          // その他の習慣に対する説明を追加
+        };
+  
+        var selectedHabit = this.value;
+        var description = descriptions[selectedHabit] || '';
+        document.getElementById('habit-description').innerHTML = description;
+      });
+    });
+  </script>
+  
+</head>
+<body>
+  <!-- 共通ヘッダー -->
+  <header>
+    <div class="header-container">
+      <div class="title-container">
+        <span class="title-part">Mindful</span>
+        <span class="title-part">Improvement</span>
+        <span class="title-part">Surprise</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">ホーム</a></li>
+          <li><a href="#">習慣一覧</a></li>
+          <li><a href="#">実績</a></li>
+          <li><a href="#">設定</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <!-- メインコンテンツ -->
+  <main>
+    <section>
+      <h2>新しい習慣を追加</h2>
+      <!-- 習慣の新規作成フォーム -->
+      <form action="" method="post">
+        <!-- フォーム要素 -->
+        <label for="habit-name">習慣の名前:</label>
+        <select id="habit-name" name="habit-name" required>
+          <option value="">選択してください</option>
+          <option value="食生活">身体に悪いモノを食べない</option>
+          <option value="読書">読書</option>
+          <option value="瞑想">瞑想</option>
+          <option value="早起き">早起き</option>
+          <!-- その他の習慣を追加 -->
+        </select>
 
-<%= form_with model: Habit.new, url: habits_path, local: true do |form| %>
-  <div class="field">
-    <%= form.label :name, "習慣の名前" %><br>
-    <%= form.select :name, options_for_select(['食生活', '読書', '瞑想', '早起き']), include_blank: "選択してください" %>
-  </div>
+        <p id="habit-description"></p>
 
-  <div class="actions">
-    <%= form.submit "追加する" %>
-  </div>
-<% end %>
+        <input type="submit" value="追加する">
+      </form>
+    </section>
+  </main>
+  
+  <!-- 共通フッター -->
+  <footer>
+    <p>&copy; 2023 習慣サプライズ</p>
+  </footer>
+</body>
+</html>

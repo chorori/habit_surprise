@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title><%= @habit.name %>の詳細 | 習慣サプライズ</title>
+  <!-- スタイルシートのリンクなど -->
+</head>
+<body>
+  <!-- 共通ヘッダー -->
+  <header>
+    <!-- ロゴ、ナビゲーションメニューなど -->
+  </header>
+  
+  <!-- メインコンテンツ -->
+  <main>
+    <section>
+      <h2><%= @habit.name %></h2>
+      <!-- 習慣の説明を動的に表示 -->
+      <p><%= @habit.description %></p>
+      <!-- 習慣の詳細情報 -->
+      <p>開始日: <%= @habit.start_date %></p>
+      <p>目標日数: <%= @habit.duration %>日</p>
+      <!-- 習慣の編集・削除リンク -->
+      <%= link_to '編集する', edit_habit_path(@habit), class: 'btn' %>
+      <%= link_to '削除する', habit_path(@habit), method: :delete, data: { confirm: '本当に削除しますか？' }, class: 'btn' %>
+    </section>
+  </main>
+  
+  <!-- 共通フッター -->
+  <footer>
+    <!-- フッターコンテンツ -->
+  </footer>
+</body>
+</html>
