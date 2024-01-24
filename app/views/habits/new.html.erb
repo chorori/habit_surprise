@@ -58,26 +58,23 @@
   <main>
     <section>
       <h2>新しい習慣を追加</h2>
-      <!-- 習慣の新規作成フォーム -->
-      <form action="" method="post">
-        <!-- フォーム要素 -->
-        <label for="habit-name">習慣の名前:</label>
-        <select id="habit-name" name="habit-name" required>
-          <option value="">選択してください</option>
-          <option value="食生活">身体に悪いモノを食べない</option>
-          <option value="読書">読書</option>
-          <option value="瞑想">瞑想</option>
-          <option value="早起き">早起き</option>
-          <!-- その他の習慣を追加 -->
-        </select>
+      
+      <!-- form_with ヘルパーを使用したフォーム -->
+      <%= form_with model: @habit, local: true do |form| %>
+        <div>
+          <%= form.label :name, "習慣の名前:" %>
+          <%= form.select :name, ['食生活', '読書', '瞑想', '早起き'], { prompt: '選択してください' } %>
+        </div>
 
-        <p id="habit-description"></p>
+        <div id="habit-description"></div>
 
-        <input type="submit" value="追加する">
-      </form>
+        <div>
+          <%= form.submit "追加する" %>
+        </div>
+      <% end %>
     </section>
   </main>
-  
+
   <!-- 共通フッター -->
   <footer>
     <p>&copy; 2023 習慣サプライズ</p>
