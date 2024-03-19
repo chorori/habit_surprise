@@ -21,6 +21,12 @@ class HabitsController < ApplicationController
     @habit = Habit.find(params[:id])
   end
 
+  def destroy
+    @habit = Habit.find(params[:id])
+    @habit.destroy
+    redirect_to habits_path, notice: '習慣が削除されました。'
+  end
+
   private
 
   def habit_params
